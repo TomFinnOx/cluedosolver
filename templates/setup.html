@@ -7,7 +7,7 @@
 
     <label>Your Initials</label>
     <input type="text" name="initials" ng-model="players[0].name"
-           placeholder="Your Initials" ng-maxlength="3" required>
+           placeholder="Your Initials" required>
     <p class="error" ng-show="form.initials.$error.maxlength">
        Maximum of 3 letters
     </p>
@@ -33,7 +33,7 @@
     <div class="row" ng-repeat="player in players">
       <input type="text" name="initials{{$index}}"
             ng-model="player.name" placeholder="Player {{$index+1}} Initials"
-            ng-maxlength="3" ng-disabled="$index === 0" required>
+             ng-disabled="$index === 0" required>
       <p class="error" ng-show="form.initials{{$index}}.$error.maxlength">
         Maximum of 3 letters
       </p>
