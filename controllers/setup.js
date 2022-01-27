@@ -16,7 +16,7 @@
       $scope.totalCards = 0;
       for (var i in $scope.players) {
         var player = $scope.players[i];
-        player.numCards = Math.floor(18 / $scope.numPlayers);
+        player.numCards = Math.floor(28 / $scope.numPlayers);
         if (player.hasExtraCard) player.numCards++;
         $scope.totalCards += player.numCards;
       }
@@ -40,7 +40,7 @@
     });
 
     $scope.validCardTotal = function() {
-      return $scope.totalCards === 18;
+      return $scope.totalCards === 28;
     };
 
     $scope.validHandCount = function() {
